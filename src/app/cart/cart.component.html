@@ -3,6 +3,7 @@
   <span>{{item.name}}</span>
   <span>${{item.price}}</span>
 </div>
+<span *ngIf = "items.length > 0">Total: {{total | currency}}</span>
 <form [formGroup]="checkOutForm" (ngSubmit)="formSubmitHandler()">
   <div>
     <label for="name">
